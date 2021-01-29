@@ -8,6 +8,7 @@
 
 # Variables
 $searchbase = "DC=Indyad,DC=Local"
+$domain = "IndyAD"
 
 
 $ErrorActionPreference = "SilentlyContinue"
@@ -156,7 +157,7 @@ Do {
     Write-Host $StartDate -ForegroundColor Yellow
     $CurrentDate = $CurrentDate.ToString('yyyy-MM-dd@HH-mm-ss')
 
-    Write-Host "Do you want to check against one System, a List, or all $searchbase Domain?" -ForegroundColor Yellow
+    Write-Host "Do you want to check against one System, a List, or all of $domain Domain?" -ForegroundColor Yellow
     Write-Host "(Enter" -ForegroundColor Yellow -NoNewline
     Write-Host " 1 " -NoNewline
     Write-Host "for just one ," -ForegroundColor Yellow -NoNewline 
@@ -165,7 +166,7 @@ Do {
     Write-Host " 3 " -NoNewline
     Write-Host "for Specific Org Unit, or" -ForegroundColor Yellow -NoNewline
     Write-Host " 4 " -NoNewline
-    Write-Host "for $searchbase Domain)" -ForegroundColor Yellow
+    Write-Host "for $domain Domain)" -ForegroundColor Yellow
 
 
     $Answer = Read-Host
